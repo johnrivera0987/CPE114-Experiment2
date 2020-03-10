@@ -1,0 +1,160 @@
+#! c:/iverilog-x64/bin/vvp
+:ivl_version "10.1 (stable)" "(v10_1_1)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 7;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00000000010ec920 .scope module, "testbench" "testbench" 2 4;
+ .timescale 0 -7;
+v0000000001079a30_0 .var "a", 0 0;
+v0000000001079cb0_0 .var "b", 0 0;
+v0000000001079ad0_0 .var "borrowIn", 0 0;
+v0000000001079df0_0 .net "borrowOut", 0 0, L_000000000107c3e0;  1 drivers
+v00000000010798f0_0 .net "diff", 0 0, L_000000000107bda0;  1 drivers
+S_0000000001015140 .scope module, "fs" "full_subtract" 2 7, 3 2 0, S_00000000010ec920;
+ .timescale 0 -7;
+    .port_info 0 /OUTPUT 1 "diff"
+    .port_info 1 /OUTPUT 1 "borrowOut"
+    .port_info 2 /INPUT 1 "a"
+    .port_info 3 /INPUT 1 "b"
+    .port_info 4 /INPUT 1 "borrowIn"
+L_000000000107c7d0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000000010ecc20_0 .net *"_s10", 0 0, L_000000000107c7d0;  1 drivers
+v00000000010152c0_0 .net *"_s11", 1 0, L_000000000107a9a0;  1 drivers
+v0000000001015360_0 .net *"_s13", 1 0, L_000000000107aea0;  1 drivers
+L_000000000107c818 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000000001015400_0 .net *"_s16", 0 0, L_000000000107c818;  1 drivers
+v00000000010154a0_0 .net *"_s17", 1 0, L_000000000107af40;  1 drivers
+v0000000001027a40_0 .net *"_s3", 1 0, L_000000000107b800;  1 drivers
+L_000000000107c788 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000000000107a250_0 .net *"_s6", 0 0, L_000000000107c788;  1 drivers
+v000000000107a110_0 .net *"_s7", 1 0, L_000000000107c480;  1 drivers
+v0000000001079d50_0 .net "a", 0 0, v0000000001079a30_0;  1 drivers
+v0000000001079c10_0 .net "b", 0 0, v0000000001079cb0_0;  1 drivers
+v000000000107a2f0_0 .net "borrowIn", 0 0, v0000000001079ad0_0;  1 drivers
+v0000000001079b70_0 .net "borrowOut", 0 0, L_000000000107c3e0;  alias, 1 drivers
+v0000000001079990_0 .net "diff", 0 0, L_000000000107bda0;  alias, 1 drivers
+L_000000000107c3e0 .part L_000000000107af40, 1, 1;
+L_000000000107bda0 .part L_000000000107af40, 0, 1;
+L_000000000107b800 .concat [ 1 1 0 0], v0000000001079a30_0, L_000000000107c788;
+L_000000000107c480 .concat [ 1 1 0 0], v0000000001079cb0_0, L_000000000107c7d0;
+L_000000000107a9a0 .arith/sub 2, L_000000000107b800, L_000000000107c480;
+L_000000000107aea0 .concat [ 1 1 0 0], v0000000001079ad0_0, L_000000000107c818;
+L_000000000107af40 .arith/sub 2, L_000000000107a9a0, L_000000000107aea0;
+S_00000000010ecaa0 .scope module, "testingFS" "testingFS" 3 11;
+ .timescale 0 -7;
+v000000000107c660_0 .var "a", 0 0;
+v000000000107bb20_0 .var "b", 0 0;
+v000000000107a900_0 .var "borrowIn", 0 0;
+v000000000107b8a0_0 .net "borrowOut", 0 0, L_000000000107afe0;  1 drivers
+v000000000107c520_0 .net "diff", 0 0, L_000000000107b440;  1 drivers
+S_0000000001027ae0 .scope module, "fs" "full_subtract" 3 15, 3 2 0, S_00000000010ecaa0;
+ .timescale 0 -7;
+    .port_info 0 /OUTPUT 1 "diff"
+    .port_info 1 /OUTPUT 1 "borrowOut"
+    .port_info 2 /INPUT 1 "a"
+    .port_info 3 /INPUT 1 "b"
+    .port_info 4 /INPUT 1 "borrowIn"
+L_000000000107c8a8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000000010797b0_0 .net *"_s10", 0 0, L_000000000107c8a8;  1 drivers
+v0000000001079e90_0 .net *"_s11", 1 0, L_000000000107c0c0;  1 drivers
+v000000000107a1b0_0 .net *"_s13", 1 0, L_000000000107ab80;  1 drivers
+L_000000000107c8f0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v000000000107a390_0 .net *"_s16", 0 0, L_000000000107c8f0;  1 drivers
+v000000000107a430_0 .net *"_s17", 1 0, L_000000000107ac20;  1 drivers
+v0000000001079f30_0 .net *"_s3", 1 0, L_000000000107aa40;  1 drivers
+L_000000000107c860 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000000001079fd0_0 .net *"_s6", 0 0, L_000000000107c860;  1 drivers
+v0000000001079850_0 .net *"_s7", 1 0, L_000000000107aae0;  1 drivers
+v000000000107a070_0 .net "a", 0 0, v000000000107c660_0;  1 drivers
+v000000000107a4d0_0 .net "b", 0 0, v000000000107bb20_0;  1 drivers
+v000000000107a570_0 .net "borrowIn", 0 0, v000000000107a900_0;  1 drivers
+v000000000107a610_0 .net "borrowOut", 0 0, L_000000000107afe0;  alias, 1 drivers
+v000000000107a6b0_0 .net "diff", 0 0, L_000000000107b440;  alias, 1 drivers
+L_000000000107afe0 .part L_000000000107ac20, 1, 1;
+L_000000000107b440 .part L_000000000107ac20, 0, 1;
+L_000000000107aa40 .concat [ 1 1 0 0], v000000000107c660_0, L_000000000107c860;
+L_000000000107aae0 .concat [ 1 1 0 0], v000000000107bb20_0, L_000000000107c8a8;
+L_000000000107c0c0 .arith/sub 2, L_000000000107aa40, L_000000000107aae0;
+L_000000000107ab80 .concat [ 1 1 0 0], v000000000107a900_0, L_000000000107c8f0;
+L_000000000107ac20 .arith/sub 2, L_000000000107c0c0, L_000000000107ab80;
+    .scope S_00000000010ec920;
+T_0 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000001079a30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000001079cb0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000001079ad0_0, 0, 1;
+    %delay 100000000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000001079a30_0, 0, 1;
+    %delay 100000000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000001079a30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000001079cb0_0, 0, 1;
+    %delay 100000000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000001079a30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000000001079cb0_0, 0, 1;
+    %delay 100000000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000000001079ad0_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_00000000010ec920;
+T_1 ;
+    %vpi_call 2 19 "$display", " a b borrowIn difference borrowOut time" {0 0 0};
+    %vpi_call 2 20 "$monitor", "%b %b %b %b %b %d", v0000000001079a30_0, v0000000001079cb0_0, v0000000001079ad0_0, v00000000010798f0_0, v0000000001079df0_0, $time {0 0 0};
+    %delay 100000000, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_00000000010ecaa0;
+T_2 ;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000107c660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000107bb20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000107a900_0, 0, 1;
+    %end;
+    .thread T_2;
+    .scope S_00000000010ecaa0;
+T_3 ;
+    %delay 100000000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000107c660_0, 0, 1;
+    %delay 100000000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000107c660_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000107bb20_0, 0, 1;
+    %delay 100000000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000107c660_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000000000107bb20_0, 0, 1;
+    %delay 100000000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000000000107a900_0, 0, 1;
+    %end;
+    .thread T_3;
+    .scope S_00000000010ecaa0;
+T_4 ;
+    %vpi_call 3 29 "$display", "    a     b    borrowIn    difference   borrowOut  time" {0 0 0};
+    %vpi_call 3 30 "$monitor", "  %b    %b    %b       %b      %b    %b  ", v000000000107c660_0, v000000000107bb20_0, v000000000107a900_0, v000000000107c520_0, v000000000107b8a0_0, $time {0 0 0};
+    %delay 100000000, 0;
+    %vpi_call 3 31 "$finish" {0 0 0};
+    %end;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "Exercise2_2.v";
+    "./drill1_2.v";
